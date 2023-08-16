@@ -1,0 +1,44 @@
+package androidx.appcompat;
+/* loaded from: classes.dex */
+public final class R$id {
+    public static final int action_bar = 2131361844;
+    public static final int action_bar_activity_content = 2131361845;
+    public static final int action_bar_container = 2131361846;
+    public static final int action_bar_subtitle = 2131361849;
+    public static final int action_bar_title = 2131361850;
+    public static final int action_context_bar = 2131361852;
+    public static final int action_menu_presenter = 2131361856;
+    public static final int action_mode_bar_stub = 2131361859;
+    public static final int action_mode_close_button = 2131361860;
+    public static final int alertTitle = 2131361871;
+    public static final int buttonPanel = 2131361941;
+    public static final int content = 2131361975;
+    public static final int contentPanel = 2131361976;
+    public static final int custom = 2131361986;
+    public static final int customPanel = 2131361987;
+    public static final int decor_content_parent = 2131361993;
+    public static final int group_divider = 2131362080;
+    public static final int parentPanel = 2131362279;
+    public static final int scrollIndicatorDown = 2131362324;
+    public static final int scrollIndicatorUp = 2131362325;
+    public static final int scrollView = 2131362326;
+    public static final int search_button = 2131362330;
+    public static final int search_close_btn = 2131362331;
+    public static final int search_edit_frame = 2131362332;
+    public static final int search_go_btn = 2131362333;
+    public static final int search_mag_icon = 2131362334;
+    public static final int search_plate = 2131362335;
+    public static final int search_src_text = 2131362336;
+    public static final int search_voice_btn = 2131362337;
+    public static final int shortcut = 2131362357;
+    public static final int spacer = 2131362372;
+    public static final int split_action_bar = 2131362376;
+    public static final int submenuarrow = 2131362394;
+    public static final int submit_area = 2131362395;
+    public static final int textSpacerNoButtons = 2131362467;
+    public static final int textSpacerNoTitle = 2131362468;
+    public static final int title = 2131362484;
+    public static final int titleDividerNoCustom = 2131362485;
+    public static final int title_template = 2131362486;
+    public static final int topPanel = 2131362489;
+}

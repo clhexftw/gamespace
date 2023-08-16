@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:persistent="false" android:key="headers"/>
+    <ListPreference android:persistent="false" android:entries="@array/per_app_preferred_mode_entries" android:title="@string/per_app_mode_title" android:key="per_app_preferred_mode" android:summary="%s" android:defaultValue="1" android:entryValues="@array/per_app_preferred_mode_values"/>
+    <org.nameless.custom.preference.SwitchPreference android:title="@string/per_app_angle_title" android:key="per_app_use_angle" android:summary="@string/per_app_angle_summary" android:defaultValue="false"/>
+    <Preference android:icon="@drawable/ic_remove" android:key="per_app_unregister" app:allowDividerAbove="true"/>
+</PreferenceScreen>

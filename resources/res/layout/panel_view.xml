@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:theme="@style/GameSpaceTheme.Panel" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardCornerRadius="@android:dimen/config_pictureInPictureDefaultSizePercent">
+    <ScrollView android:scrollbars="none" android:clipToPadding="true" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="32sp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/settings_title" android:fontFamily="@android:string/data_usage_limit_snoozed_body" android:layout_marginHorizontal="4dp"/>
+            <TextView android:textSize="13sp" android:id="@+id/temp_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/temperature_fetching" android:fontFamily="@android:string/data_usage_limit_snoozed_body" android:layout_marginHorizontal="5dp"/>
+            <include layout="@layout/tiles"/>
+            <HorizontalScrollView android:layout_width="256dp" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <org.nameless.gamespace.widget.QuickLaunchAppView android:id="@+id/quick_launch_apps" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

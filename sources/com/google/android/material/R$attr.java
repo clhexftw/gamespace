@@ -1,0 +1,44 @@
+package com.google.android.material;
+/* loaded from: classes.dex */
+public final class R$attr {
+    public static final int appBarLayoutStyle = 2130968631;
+    public static final int autoCompleteTextViewStyle = 2130968639;
+    public static final int bottomSheetStyle = 2130968689;
+    public static final int checkboxStyle = 2130968739;
+    public static final int chipStyle = 2130968768;
+    public static final int collapsingToolbarLayoutStyle = 2130968801;
+    public static final int colorControlActivated = 2130968808;
+    public static final int colorControlHighlight = 2130968809;
+    public static final int colorError = 2130968811;
+    public static final int colorOnSurface = 2130968822;
+    public static final int colorPrimary = 2130968828;
+    public static final int colorPrimaryVariant = 2130968833;
+    public static final int colorSurface = 2130968837;
+    public static final int editTextStyle = 2130968960;
+    public static final int elevationOverlayAccentColor = 2130968962;
+    public static final int elevationOverlayColor = 2130968963;
+    public static final int elevationOverlayEnabled = 2130968964;
+    public static final int isMaterialTheme = 2130969142;
+    public static final int materialButtonStyle = 2130969309;
+    public static final int materialButtonToggleGroupStyle = 2130969310;
+    public static final int materialCalendarFullscreenTheme = 2130969313;
+    public static final int materialCalendarStyle = 2130969323;
+    public static final int materialCalendarTheme = 2130969324;
+    public static final int materialClockStyle = 2130969331;
+    public static final int materialThemeOverlay = 2130969340;
+    public static final int motionDurationLong2 = 2130969393;
+    public static final int motionDurationMedium1 = 2130969396;
+    public static final int motionEasingEmphasizedAccelerateInterpolator = 2130969407;
+    public static final int motionEasingEmphasizedInterpolator = 2130969409;
+    public static final int nestedScrollable = 2130969443;
+    public static final int radioButtonStyle = 2130969515;
+    public static final int snackbarStyle = 2130969598;
+    public static final int state_collapsed = 2130969620;
+    public static final int state_collapsible = 2130969621;
+    public static final int state_error = 2130969624;
+    public static final int state_liftable = 2130969625;
+    public static final int state_lifted = 2130969626;
+    public static final int textAppearanceLineHeightEnabled = 2130969841;
+    public static final int textInputStyle = 2130969871;
+    public static final int theme = 2130969882;
+}

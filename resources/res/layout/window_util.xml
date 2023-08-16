@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:theme="@style/GameSpaceTheme.GameBar" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@+id/container_bar" android:background="@drawable/bar_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:paddingVertical="5dp">
+        <org.nameless.gamespace.widget.MenuSwitcher android:id="@+id/action_menu_switcher" android:layout_width="@dimen/actions_size" android:layout_height="@dimen/actions_size"/>
+        <ImageButton android:id="@+id/action_panel" android:padding="8dp" android:layout_width="@dimen/actions_size" android:layout_height="@dimen/actions_size" android:layout_marginTop="5dp" android:src="@drawable/ic_gear" android:scaleType="centerInside"/>
+        <ImageButton android:id="@+id/action_screenshot" android:padding="8dp" android:layout_width="@dimen/actions_size" android:layout_height="@dimen/actions_size" android:layout_marginTop="5dp" android:src="@drawable/ic_action_screenshot" android:scaleType="centerInside"/>
+        <ImageButton android:id="@+id/action_record" android:background="@drawable/ripple_circle_record" android:padding="8dp" android:layout_width="@dimen/actions_size" android:layout_height="@dimen/actions_size" android:layout_marginTop="5dp" android:src="@drawable/ic_action_record" android:scaleType="centerInside"/>
+    </LinearLayout>
+</FrameLayout>

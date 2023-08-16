@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="android.uid.system" android:versionCode="33" android:versionName="13" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="org.nameless.gamespace" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-sdk android:minSdkVersion="33" android:targetSdkVersion="33"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.MANAGE_GAME_MODE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_DEVICE_CONFIG"/>
+    <uses-permission android:name="com.android.systemui.permission.SCREEN_RECORDING"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
+    <uses-permission android:name="android.permission.ACCESS_FPS_COUNTER"/>
+    <protected-broadcast android:name="org.nameless.gamespace.CLONE_PANEL"/>
+    <permission android:name="org.nameless.gamespace.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="org.nameless.gamespace.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <queries>
+        <intent>
+            <action android:name="com.android.setupwizard.action.PARTNER_CUSTOMIZATION"/>
+        </intent>
+    </queries>
+    <application android:theme="@style/GameSpaceTheme" android:label="@string/settings_title" android:icon="@drawable/ic_launcher" android:name="org.nameless.gamespace.GameSpace" android:supportsRtl="true" android:extractNativeLibs="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:usesNonSdkApi="true">
+        <activity android:name="org.nameless.gamespace.settings.SettingsActivity" android:exported="true" android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="org.nameless.gamespace.settings.PerAppSettingsActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:label="@string/app_selector_label" android:name="org.nameless.gamespace.preferences.appselector.AppSelectorActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="org.nameless.gamespace.gamebar.SessionService" android:exported="false"/>
+        <service android:name="org.nameless.gamespace.gamebar.GameBarService" android:exported="false"/>
+        <receiver android:name="org.nameless.gamespace.gamebar.GameBroadcastReceiver" android:permission="android.permission.MANAGE_GAME_MODE" android:exported="true">
+            <intent-filter>
+                <action android:name="org.nameless.gamespace.action.GAME_START"/>
+                <action android:name="org.nameless.gamespace.action.GAME_STOP"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="org.nameless.gamespace.androidx-startup">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:theme="@style/SudThemeGlifV2.DayNight" android:name="com.android.settingslib.users.AvatarPickerActivity"/>
+    </application>
+</manifest>
