@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" android:title="@string/qs_brightness_slider_title">
+    <org.nameless.custom.preference.SystemSettingListPreference android:entries="@array/qs_show_brightness_entries" android:title="@string/qs_show_brightness_title" android:key="qs_show_brightness" android:defaultValue="1" android:entryValues="@array/qs_show_brightness_values"/>
+    <org.nameless.custom.preference.SystemSettingSwitchPreference android:title="@string/qs_show_auto_brightness_button_title" android:key="qs_show_auto_brightness_button" android:summary="@string/qs_show_auto_brightness_button_summary" android:defaultValue="false"/>
+    <org.nameless.custom.preference.SystemSettingSwitchPreference android:title="@string/qs_brightness_position_position_title" android:key="qs_brightness_position_bottom" android:summary="@string/qs_brightness_position_position_summary" android:defaultValue="false"/>
+</PreferenceScreen>

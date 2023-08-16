@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" android:title="@string/unlock_set_unlock_launch_picker_title" android:key="security_settings_password_sub_screen" settings:searchable="false">
+    <org.nameless.custom.preference.SwitchPreference android:title="@string/lockpattern_settings_enable_visible_pattern_title" android:key="visiblepattern"/>
+    <org.nameless.custom.preference.SwitchPreference android:title="@string/lockpattern_settings_enhanced_pin_privacy_title" android:key="enhancedPinPrivacy" android:summary="@string/lockpattern_settings_enhanced_pin_privacy_summary"/>
+    <org.nameless.custom.preference.SwitchPreference android:title="@string/lockpattern_settings_enable_error_path_title" android:key="visible_error_pattern"/>
+    <org.nameless.custom.preference.SwitchPreference android:title="@string/lockpattern_settings_enable_dots_title" android:key="visibledots"/>
+    <com.android.settings.display.TimeoutListPreference android:entries="@array/lock_after_timeout_entries" android:title="@string/lock_after_timeout" android:key="lock_after_timeout" android:summary="@string/summary_placeholder" android:entryValues="@array/lock_after_timeout_values"/>
+    <org.nameless.custom.preference.SwitchPreference android:title="@string/lockpattern_settings_enable_power_button_instantly_locks" android:key="power_button_instantly_locks"/>
+    <org.nameless.custom.preference.SwitchPreference android:title="@string/unlock_scramble_pin_layout_title" android:key="lockscreen_scramble_pin_layout" android:summary="@string/unlock_scramble_pin_layout_summary"/>
+</PreferenceScreen>

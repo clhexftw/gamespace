@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" android:title="@string/security_settings_fingerprint_preference_title">
+    <PreferenceCategory android:title="@string/security_settings_fingerprint_settings_preferences_category" android:key="security_settings_fingerprint_unlock_category" settings:controller="com.android.settings.biometrics.fingerprint.FingerprintUnlockCategoryPreferenceController">
+        <com.android.settingslib.RestrictedSwitchPreference android:title="@string/security_settings_require_screen_on_to_auth_title" android:key="security_settings_require_screen_on_to_auth" android:summary="@string/security_settings_require_screen_on_to_auth_description" settings:controller="com.android.settings.biometrics.fingerprint.FingerprintSettingsRequireScreenOnToAuthPreferenceController" settings:keywords="@string/security_settings_require_screen_on_to_auth_keywords"/>
+    </PreferenceCategory>
+</PreferenceScreen>

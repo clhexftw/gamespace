@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" android:title="@string/header_category_system" android:key="system_dashboard_screen">
+    <Preference android:icon="@drawable/ic_settings_language" android:title="@string/language_settings" android:key="language_input_settings" android:order="-260" android:fragment="com.android.settings.language.LanguageAndInputSettings"/>
+    <Preference android:icon="@drawable/ic_settings_gestures" android:title="@string/gesture_preference_title" android:key="gesture_settings" android:order="-250" android:fragment="com.android.settings.gestures.GestureSettings" settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
+    <Preference android:icon="@drawable/ic_settings_date_time" android:title="@string/date_and_time" android:key="date_time_settings" android:order="-240" android:fragment="com.android.settings.datetime.DateTimeSettings" settings:controller="com.android.settings.datetime.DateTimePreferenceController"/>
+    <Preference android:icon="@drawable/ic_system_update" android:title="@string/system_update_title" android:key="system_update" android:order="-235">
+        <intent android:targetPackage="org.nameless.updates" android:targetClass="org.nameless.updates.UpdatesActivity"/>
+    </Preference>
+    <Preference android:icon="@drawable/ic_restore" android:title="@string/reset_dashboard_title" android:key="reset_dashboard" android:order="-30" android:fragment="com.android.settings.system.ResetDashboardFragment" settings:controller="com.android.settings.system.ResetPreferenceController"/>
+</PreferenceScreen>

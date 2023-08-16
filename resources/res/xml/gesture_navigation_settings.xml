@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" android:title="@string/gesture_settings_activity_title" android:key="gesture_navigation_settings_page" settings:keywords="@string/keywords_gesture_navigation_settings">
+    <PreferenceCategory android:persistent="false" android:title="@string/assistant_gesture_category_title" android:key="assistant_gesture_category">
+        <org.nameless.custom.preference.SwitchPreference android:title="@string/assistant_corner_gesture_title" android:key="assistant_gesture_corner_swipe" android:summary="@string/assistant_corner_gesture_summary" settings:controller="com.android.settings.gestures.GestureNavigationSettingsAssistController"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/back_gesture_category_title" android:key="back_gesture_category">
+        <org.nameless.custom.preference.SecureSettingSwitchPreference android:title="@string/back_gesture_arrow_title" android:key="back_gesture_arrow" android:summary="@string/back_gesture_arrow_summary" android:defaultValue="true"/>
+        <org.nameless.custom.preference.SystemSettingListPreference android:entries="@array/back_gesture_long_swipe_action_entries" android:title="@string/left_back_long_swipe_title" android:key="left_long_back_swipe_action" android:summary="%s" android:defaultValue="0" android:entryValues="@array/back_gesture_long_swipe_action_values"/>
+        <org.nameless.custom.preference.SystemSettingListPreference android:entries="@array/back_gesture_long_swipe_action_entries" android:title="@string/right_back_long_swipe_title" android:key="right_long_back_swipe_action" android:summary="%s" android:defaultValue="0" android:entryValues="@array/back_gesture_long_swipe_action_values"/>
+        <com.android.settingslib.widget.FooterPreference android:selectable="false" android:key="long_back_swipe_footer" settings:controller="com.android.settings.gestures.LongSwipeGestureTipController" settings:searchable="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/back_sensitivity_dialog_title" android:key="back_sensitivity_category">
+        <com.android.settings.widget.LabeledSeekBarPreference android:max="2" android:title="@string/left_edge" android:key="gesture_left_back_sensitivity" settings:textEnd="@string/high_label" settings:textStart="@string/low_label"/>
+        <com.android.settings.widget.LabeledSeekBarPreference android:max="2" android:title="@string/right_edge" android:key="gesture_right_back_sensitivity" settings:textEnd="@string/high_label" settings:textStart="@string/low_label"/>
+        <com.android.settingslib.widget.FooterPreference android:title="@string/back_sensitivity_dialog_message" android:selectable="false" android:key="gesture_navigation_settings_footer" settings:searchable="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/gesture_navbar_category_title" android:key="navigation_bar_misc">
+        <com.android.settings.widget.LabeledSeekBarPreference android:max="3" android:title="@string/pill_length_title" android:selectable="true" android:key="gesture_navbar_length_preference" settings:textEnd="@string/long_label" settings:textStart="@string/hide_label"/>
+        <com.android.settings.widget.LabeledSeekBarPreference android:max="2" android:title="@string/pill_radius_title" android:selectable="true" android:key="gesture_navbar_radius_preference" settings:textEnd="@string/thick_label" settings:textStart="@string/thin_label"/>
+        <org.nameless.custom.preference.SecureSettingSwitchPreference android:title="@string/ime_space_title" android:key="gesture_navbar_ime_space" android:summary="@string/ime_space_summary" android:defaultValue="true"/>
+        <org.nameless.custom.preference.SecureSettingSwitchPreference android:title="@string/immersive_gesture_bar_title" android:key="gesture_navbar_immersive" android:summary="@string/immersive_gesture_bar_summary" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

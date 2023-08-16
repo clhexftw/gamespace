@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" android:title="@string/per_app_refresh_rate_title" android:key="per_app_refresh_rate_scren" settings:searchable="false"/>

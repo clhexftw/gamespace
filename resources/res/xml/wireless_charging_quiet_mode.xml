@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" android:title="@string/wireless_charging_settings_title">
+    <com.android.settingslib.widget.TopIntroPreference android:title="@string/wireless_charging_quiet_mode_summary" android:key="wireless_charging_quiet_mode_info"/>
+    <com.android.settingslib.widget.MainSwitchPreference android:title="@string/wireless_charging_quiet_mode_enable_title" android:key="wireless_charging_quiet_mode_enabled" android:defaultValue="false" settings:controller="com.android.settings.fuelgauge.quietmode.QuietModeEnablePreferenceController"/>
+    <org.nameless.custom.preference.SystemSettingListPreference android:entries="@array/wireless_charging_quiet_mode_time_entries" android:title="@string/wireless_charging_quiet_mode_time" android:key="wireless_charging_quiet_mode_status" android:summary="%s" android:defaultValue="0" android:entryValues="@array/wireless_charging_quiet_mode_time_values" settings:controller="com.android.settings.fuelgauge.quietmode.QuietModeStatusPreferenceController"/>
+    <Preference android:title="@string/wireless_charging_quiet_mode_start" android:key="wireless_charging_quiet_mode_start_time" settings:controller="com.android.settings.fuelgauge.quietmode.QuietModeCustomStartTimePreferenceController"/>
+    <Preference android:title="@string/wireless_charging_quiet_mode_end" android:key="wireless_charging_quiet_mode_end_time" settings:controller="com.android.settings.fuelgauge.quietmode.QuietModeCustomEndTimePreferenceController"/>
+</PreferenceScreen>

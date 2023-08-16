@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android.title="@string/heads_up_notifications_title">
+    <com.android.settings.preference.GlobalSettingMainSwitchPreference android:title="@string/heads_up_notifications_enable" android:key="heads_up_notifications_enabled" android:defaultValue="true"/>
+    <org.nameless.custom.preference.SystemSettingSwitchPreference android:title="@string/heads_up_disable_in_landscape_title" android:key="disable_landscape_heads_up" android:summary="@string/heads_up_disable_in_landscape_summary" android:dependency="heads_up_notifications_enabled" android:defaultValue="false"/>
+    <org.nameless.custom.preference.SystemSettingSwitchPreference android:title="@string/less_boring_heads_up_title" android:key="less_boring_heads_up" android:summary="@string/less_boring_heads_up_summary" android:dependency="heads_up_notifications_enabled" android:defaultValue="false"/>
+    <ListPreference android:persistent="false" android:entries="@array/heads_up_time_out_entries" android:title="@string/heads_up_time_out_title" android:key="heads_up_time_out" android:dependency="heads_up_notifications_enabled" android:entryValues="@array/heads_up_time_out_values"/>
+    <ListPreference android:persistent="false" android:entries="@array/heads_up_snooze_entries" android:title="@string/heads_up_snooze_title" android:key="heads_up_snooze_time" android:dependency="heads_up_notifications_enabled" android:entryValues="@array/heads_up_snooze_values"/>
+    <Preference android:title="@string/heads_up_stoplist_title" android:key="heads_up_stoplist" android:summary="@string/heads_up_stoplist_summary" android:dependency="heads_up_notifications_enabled" android:fragment="com.android.settings.notification.HeadsUpStoplistSettings"/>
+    <Preference android:title="@string/heads_up_blacklist_title" android:key="heads_up_blacklist" android:summary="@string/heads_up_blacklist_summary" android:dependency="heads_up_notifications_enabled" android:fragment="com.android.settings.notification.HeadsUpBlacklistSettings"/>
+</PreferenceScreen>

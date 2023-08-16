@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" android:title="@string/color_mode_title">
+    <PreferenceCategory android:title="@string/color_mode_balance_category" android:key="color_balance_category" android:order="100">
+        <org.nameless.custom.preference.SecureSettingSeekBarPreference android:max="255" android:title="@string/color_mode_balance_red" android:key="display_color_balance_red" android:defaultValue="255" settings:continuousUpdates="true" settings:min="25"/>
+        <org.nameless.custom.preference.SecureSettingSeekBarPreference android:max="255" android:title="@string/color_mode_balance_green" android:key="display_color_balance_green" android:defaultValue="255" settings:continuousUpdates="true" settings:min="25"/>
+        <org.nameless.custom.preference.SecureSettingSeekBarPreference android:max="255" android:title="@string/color_mode_balance_blue" android:key="display_color_balance_blue" android:defaultValue="255" settings:continuousUpdates="true" settings:min="25"/>
+    </PreferenceCategory>
+</PreferenceScreen>

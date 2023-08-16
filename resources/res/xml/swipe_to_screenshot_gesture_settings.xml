@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:title="@string/three_finger_gesture" android:key="swipe_to_screenshot_screen">
+    <com.android.settings.widget.VideoPreference android:key="swipe_to_screenshot_video" app:animation="@raw/swipe_to_screenshot" app:preview="@drawable/swipe_to_screenshot"/>
+    <org.nameless.custom.preference.SwitchPreference android:title="@string/three_finger_gesture" android:key="swipe_to_screenshot" android:summary="@string/three_finger_gesture_summary" app:allowDividerAbove="true" app:controller="com.android.settings.gestures.SwipeToScreenshotPreferenceController" app:keywords="@string/keywords_gesture"/>
+</PreferenceScreen>

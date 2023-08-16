@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="@string/edge_light_title">
+    <com.android.settingslib.widget.TopIntroPreference android:persistent="false" android:title="@string/edge_light_intro_text" android:selectable="false" android:key="edge_light_intro"/>
+    <com.android.settings.preference.SystemSettingMainSwitchPreference android:title="@string/enable_edge_light" android:key="edge_light_enabled" android:defaultValue="false"/>
+    <org.nameless.custom.preference.SystemSettingSwitchPreference android:title="@string/edge_light_always_trigger_on_pulse_title" android:key="edge_light_always_trigger_on_pulse" android:summary="@string/edge_light_always_trigger_on_pulse_summary" android:defaultValue="false"/>
+    <org.nameless.custom.preference.SystemSettingSwitchPreference android:title="@string/edge_light_repeat_animation_title" android:key="edge_light_repeat_animation" android:defaultValue="false" android:summaryOn="@string/edge_light_repeat_animation_summary_on" android:summaryOff="@string/edge_light_repeat_animation_summary_off"/>
+    <org.nameless.custom.preference.SystemSettingListPreference android:entries="@array/edge_light_color_mode_entries" android:title="@string/edge_light_color_mode_title" android:key="edge_light_color_mode" android:summary="%s" android:defaultValue="0" android:entryValues="@array/edge_light_color_mode_values"/>
+    <org.nameless.custom.colorpicker.ColorPickerPreference android:title="@string/edge_light_custom_color_title" android:key="edge_light_custom_color"/>
+</PreferenceScreen>

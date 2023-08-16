@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:title="@string/volume_button_music_control_title" android:key="volume_button_music_control_screen">
+    <com.android.settings.widget.VideoPreference android:key="volume_button_music_control_video" app:animation="@raw/volume_button_music_control" app:preview="@drawable/volume_button_music_control"/>
+    <org.nameless.custom.preference.SwitchPreference android:title="@string/volume_button_music_control_title" android:key="volume_button_music_control" android:summary="@string/volume_button_music_control_summary" app:allowDividerAbove="true" app:controller="com.android.settings.gestures.VolumeButtonMusicControlPreferenceController" app:defaultValue="false"/>
+</PreferenceScreen>

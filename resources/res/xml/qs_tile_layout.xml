@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:android="http://schemas.android.com/apk/res/android" android:title="@string/qs_tile_layout_title">
+    <org.nameless.custom.preference.SystemSettingSwitchPreference android:title="@string/qs_tile_hide_label_title" android:key="qs_tile_label_hide" android:summary="@string/qs_tile_hide_label_summary" android:defaultValue="false"/>
+    <org.nameless.custom.preference.SystemSettingSwitchPreference android:title="@string/qs_tile_vertical_layout_title" android:key="qs_tile_vertical_layout" android:summary="@string/qs_tile_vertical_layout_summary" android:defaultValue="false"/>
+    <PreferenceCategory android:title="@string/qs_tiles_layout_category" android:key="tiles_layout">
+        <org.nameless.custom.preference.CustomSeekBarPreference android:max="6" android:title="@string/qs_columns_portrait_title" android:key="qs_layout_columns" android:defaultValue="2" settings:min="2"/>
+        <org.nameless.custom.preference.CustomSeekBarPreference android:max="6" android:title="@string/qs_rows_portrait_title" android:key="qs_layout_rows" android:defaultValue="4" settings:min="2"/>
+        <org.nameless.custom.preference.CustomSeekBarPreference android:max="5" android:title="@string/qqs_rows_portrait_title" android:key="qqs_layout_rows" android:defaultValue="2" settings:min="1"/>
+        <com.android.settingslib.widget.LayoutPreference android:layout="@layout/qs_tile_apply_change_button" android:key="apply_change_button"/>
+    </PreferenceCategory>
+</PreferenceScreen>
