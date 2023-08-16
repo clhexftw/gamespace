@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/barButtonRipple"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+            <corners android:radius="90.0dip" />
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/error" />
+                    <corners android:radius="90.0dip" />
+                </shape>
+            </item>
+            <item android:state_selected="false">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/barButtonBackground" />
+                    <corners android:radius="90.0dip" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

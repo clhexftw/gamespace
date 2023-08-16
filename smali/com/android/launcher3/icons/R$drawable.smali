@@ -1,0 +1,13 @@
+.class public final Lcom/android/launcher3/icons/R$drawable;
+.super Ljava/lang/Object;
+.source "R.java"
+
+
+# static fields
+.field public static final adaptive_icon_drawable_wrapper:I = 0x7f080076
+
+.field public static final ic_clone_app_badge:I = 0x7f0800b2
+
+.field public static final ic_instant_app_badge:I = 0x7f0800e4
+
+.field public static final ic_work_app_badge:I = 0x7f0801a6

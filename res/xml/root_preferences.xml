@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.IllustrationPreference android:key="game_settings_illustration_video" app:lottie_rawRes="@raw/game_settings_illustration" />
+    <PreferenceCategory android:title="@string/in_game_overlay_category_title" android:key="in_game_overlay_category">
+        <org.nameless.custom.preference.SwitchPreference android:title="@string/gamespace_show_overlay_title" android:key="gamespace_show_overlay" android:summary="@string/gamespace_show_overlay_summary" android:defaultValue="true" />
+        <org.nameless.custom.preference.CustomSeekBarPreference android:max="100" android:title="@string/gamespace_menu_opacity_title" android:key="gamespace_menu_opacity" android:defaultValue="75" app:min="20" app:units="%" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/disable_options_category_title" android:key="disable_options_category">
+        <org.nameless.custom.preference.SwitchPreference android:title="@string/auto_brightness_disabled_title" android:key="gamespace_auto_brightness_disabled" android:summary="@string/auto_brightness_disabled_summary" />
+        <org.nameless.custom.preference.SwitchPreference android:title="@string/three_screenshot_disabled_title" android:key="gamespace_tfgesture_disabled" android:summary="@string/three_screenshot_disabled_summary" android:defaultValue="false" />
+        <org.nameless.custom.preference.SwitchPreference android:title="@string/adb_disabled_title" android:key="gamespace_adb_disabled" android:summary="@string/adb_disabled_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/notification_options_category_title" android:key="notification_options_category">
+        <org.nameless.custom.preference.SystemSettingSwitchPreference android:title="@string/suppress_fullscreen_intent_title" android:key="gamespace_suppress_fullscreen_intent" android:summary="@string/suppress_fullscreen_intent_summary" />
+        <ListPreference android:entries="@array/in_game_calls_entries" android:title="@string/in_game_calls_title" android:key="gamespace_calls_mode" android:summary="%s" android:defaultValue="0" android:entryValues="@array/in_game_calls_values" />
+        <ListPreference android:entries="@array/in_game_notifications_entries" android:title="@string/in_game_notifications_title" android:key="gamespace_notifications_mode" android:summary="%s" android:defaultValue="2" android:entryValues="@array/in_game_notifications_values" />
+        <ListPreference android:entries="@array/ringer_mode_entries" android:title="@string/ringer_mode_title" android:key="gamespace_ringer_mode" android:summary="%s" android:defaultValue="3" android:entryValues="@array/ringer_mode_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/misc_options_category_title" android:key="misc_options_category">
+        <Preference android:title="@string/quick_launch_apps_title" android:key="gamespace_quick_launch_apps" android:summary="@string/quick_launch_apps_summary">
+            <intent android:targetPackage="com.android.settings" android:action="android.settings.APPLICATION_DETAILS_SETTINGS" android:targetClass="com.android.settings.Settings$GameSpaceLaunchAppActivity" />
+        </Preference>
+        <org.nameless.custom.preference.SwitchPreference android:title="@string/lock_gesture_title" android:key="gamespace_lock_gesture" android:summary="@string/lock_gesture_summary" android:defaultValue="false" />
+        <org.nameless.custom.preference.SwitchPreference android:title="@string/lock_status_bar_title" android:key="gamespace_lock_statusbar" android:summary="@string/lock_status_bar_summary" android:defaultValue="false" />
+        <org.nameless.custom.preference.SwitchPreference android:title="@string/stay_awake_title" android:key="gamespace_stay_awake" android:summary="@string/stay_awake_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+    <org.nameless.gamespace.preferences.AppListPreferences android:title="@string/game_list_title" android:key="gamespace_game_list" />
+</PreferenceScreen>

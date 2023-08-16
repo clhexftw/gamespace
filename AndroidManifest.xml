@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" android:sharedUserId="android.uid.system" package="org.nameless.gamespace" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.MANAGE_GAME_MODE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_DEVICE_CONFIG"/>
+    <uses-permission android:name="com.android.systemui.permission.SCREEN_RECORDING"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
+    <uses-permission android:name="android.permission.ACCESS_FPS_COUNTER"/>
+    <protected-broadcast android:name="org.nameless.gamespace.CLONE_PANEL"/>
+    <permission android:name="org.nameless.gamespace.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="org.nameless.gamespace.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <queries>
+        <intent>
+            <action android:name="com.android.setupwizard.action.PARTNER_CUSTOMIZATION"/>
+        </intent>
+    </queries>
+    <application android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@drawable/ic_launcher" android:label="@string/settings_title" android:name="org.nameless.gamespace.GameSpace" android:supportsRtl="true" android:theme="@style/GameSpaceTheme" android:usesNonSdkApi="true">
+        <activity android:excludeFromRecents="true" android:exported="true" android:name="org.nameless.gamespace.settings.SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="org.nameless.gamespace.settings.PerAppSettingsActivity"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/app_selector_label" android:name="org.nameless.gamespace.preferences.appselector.AppSelectorActivity"/>
+        <service android:exported="false" android:name="org.nameless.gamespace.gamebar.SessionService"/>
+        <service android:exported="false" android:name="org.nameless.gamespace.gamebar.GameBarService"/>
+        <receiver android:exported="true" android:name="org.nameless.gamespace.gamebar.GameBroadcastReceiver" android:permission="android.permission.MANAGE_GAME_MODE">
+            <intent-filter>
+                <action android:name="org.nameless.gamespace.action.GAME_START"/>
+                <action android:name="org.nameless.gamespace.action.GAME_STOP"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="org.nameless.gamespace.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:name="com.android.settingslib.users.AvatarPickerActivity" android:theme="@style/SudThemeGlifV2.DayNight"/>
+    </application>
+</manifest>
